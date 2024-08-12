@@ -11,16 +11,25 @@
     <script>
       //Fizz Buzz
       for (let i = 1; i <= 100; i++) {
-        if (i % 3 === 0 && i % 5 === 0) {
-          console.log("FizzBuzz");
-        } else if (i % 3 === 0) {
-          console.log("Fizz");
-        } else if (i % 5 === 0) {
-          console.log("Buzz");
-        } else {
-          console.log(i);
-        }
-      }
+    let resultado = '';
+
+    switch (true) {
+        case (i % 3 === 0 && i % 5 === 0):
+            resultado = "FizzBuzz";
+            break;
+        case (i % 3 === 0):
+            resultado = "Fizz";
+            break;
+        case (i % 5 === 0):
+            resultado = "Buzz";
+            break;
+        default:
+            resultado = i;
+            break;
+    }
+
+    console.log(resultado);
+}
 
       //palindromo
       function esPalindromo(cadena) {
@@ -28,7 +37,7 @@
         let cadenaReversa = cadenaLimpia.split("").reverse().join("");
         return cadenaLimpia === cadenaReversa;
       }
-
+      console.log("Anita lava la tina Es palindromo?");
       console.log(esPalindromo("Anita lava la tina"));
 
       //Sumar array
@@ -78,7 +87,7 @@
         return Array.from(numeros);
       }
       console.log("Mostrando numeros aleatorios entre: 90 y 100 ")
-      console.log(generarNumerosAleatoriosUnicos(11 , 90, 100)); 
+      console.log(generarNumerosAleatoriosUnicos(11 , 80, 100)); 
     </script>
   </body>
 </html>
